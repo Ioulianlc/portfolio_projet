@@ -74,7 +74,56 @@ a {
 }   
 
 
-/* --------------------------------------HEADER-------------------------------------------------- */
+/* --------------------------------------À propos-------------------------------------------------- */
+
+.a-propos{
+    margin: 150px 80px;
+} 
+
+.titre-a-propos {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.titre-a-propos img {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+}
+.titre-section {
+    font-size: 360px;
+    margin: 0;
+}
+
+.a-propos-description {
+    width: 60%;
+    padding-right: 40px;
+}
+.a-propos-img {
+    width: 40%;
+}
+.a-propos-description h1 {
+    font-size: 24px;
+    line-height: 1.2;
+}
+.a-propos-description span {
+    color: #0040FF;
+}
+.a-propos-description p {
+    font-family: 'work sans', sans-serif;
+    font-size: 24px;
+    line-height: 1;
+    margin: 40px 0;
+}
+
+.a-propos-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 80px 100px;
+}       
+
+
 /* --------------------------------------HEADER-------------------------------------------------- */
 /* --------------------------------------HEADER-------------------------------------------------- */
 
