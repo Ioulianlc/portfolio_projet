@@ -139,31 +139,44 @@
                 <img src="img/contact_polygon.png" alt="#">
             </div>
         </div>
-        <div class="content-contact">
-            <form action="/ma-page-de-traitement" method="post">
-                <ul>
-                    <li>
-                        <label for="name">Nom&nbsp;:</label>
-                        <input type="text" id="name" name="user_name" />
-                    </li>
-                    <li>
-                        <label for="mail">E-mail&nbsp;:</label>
-                        <input type="email" id="mail" name="user_mail" />
-                    </li>
-                    <li>
-                        <label for="msg">Message&nbsp;:</label>
-                        <textarea id="msg" name="user_message"></textarea>
-                    </li>
-                </ul>
-                <div class="button">
-                    <button type="submit">Envoyer le message</button>
+
+        <div class="contact-container">
+            
+            <form action="#" method="post" class="form-content">    
+                <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="numero">Numéro</label>
+                    <input type="tel" id="numero" name="numero">
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit">Envoyer</button>
                 </div>
             </form>
+
+            <div class="img-contact">
+                <img src="img/contact_form.png" alt="Forme décorative">
+            </div>
+
         </div>
-    </section>
+        </section>
     <footer>
-        <div class="logo-footer">
-            <div>
+        <div class="footer">
+            <div class="footer-logo-container">
                 <div>
                     <img src="img/logo_footer.png" alt="#">
                     <p>Ce qui se défini par conviction se résout par la fatigue</p>
@@ -177,15 +190,16 @@
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="footer-info">
                 <div class="footer-contact">
+                    <h1>Contact</h1>
                     <ul>
                         <li>07-81-91-44-32</li>
                         <li>lc.ioulian@gmail.com</li>
                     </ul>
                 </div>
                 <div class="footer-nav">
-                    <ul>
+                    <ul> 
                         <li><a href="#">À propos</a></li>
                         <li><a href="#">Portfolio</a></li>
                         <li><a href="#">Contact</a></li>

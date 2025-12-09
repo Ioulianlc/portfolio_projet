@@ -282,13 +282,141 @@ a {
 
 /* --------------------------------------Contact-------------------------------------------------- */
 
-.contact{
-    margin: 150px 80px;
+/* --------------------------------------Contact-------------------------------------------------- */
+
+.contact {
+    margin: 150px 80px;   
+}
+
+/* Le conteneur global qui met le formulaire et l'image côte à côte */
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* Ecarte le formulaire de l'image */
+    align-items: flex-end; /* Aligne le bas du formulaire avec le bas de l'image */
+    width: 100%;
+    margin: 50px 80px;
+}
+
+/* --- PARTIE GAUCHE : FORMULAIRE --- */
+.form-content {
+    flex: 1; /* Le formulaire prend tout l'espace disponible restant */
+    max-width: 60%; /* Mais on le limite à 60% pour laisser de la place à l'image */
+    font-family: 'work sans', sans-serif;
+}
+
+.form-group {
+    margin-bottom: 40px; /* Espacement vertical aéré */
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+    letter-spacing: 0.5px;
+}
+
+.form-group input {
+    width: 100%;
+    background-color: transparent; /* Fond transparent */
+    border: none;
+    border-bottom: 1px solid #555; /* Ligne grise */
+    padding: 10px 0;
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    transition: border-color 0.3s;
+    font-family: 'work sans', sans-serif;
+}
+
+.form-group input:focus {
+    border-bottom: 1px solid #ffffff; /* Ligne blanche au focus */
+}
+
+/* --- LE BOUTON --- */
+.btn-container {
+    display: flex;
+    justify-content: flex-end; /* C'est ici qu'on colle le bouton à droite vers l'image */
+    margin-top: 30px;
+    padding-right: 0; /* S'assure qu'il touche le bord */
+}
+
+.btn-container button {
+    background-color: #d9d9d9;
+    border: none;
+    padding: 15px 50px; /* Taille du rectangle */
+    font-size: 18px;
+    font-family: 'work sans', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.btn-container button:hover {
+    background-color: #ffffff;
+}
+
+/* --- PARTIE DROITE : IMAGE --- */
+.img-contact {
+    flex: 0 0 auto; /* Empêche l'image de se déformer */
+    width: 35%; /* L'image prend environ 35% de la largeur */
+    display: flex;
+    /* justify-content: flex-end; Aligne l'image à droite dans son conteneur */
+}
+
+.img-contact img {
+    width: 225px;
+    height: 450px;
+    object-fit: contain;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column-reverse; /* Sur mobile, l'image passe au dessus ou dessous selon préférence */
+        gap: 40px;
+    }
+
+    .form-content {
+        max-width: 100%;
+    }
+
+    .img-contact {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .contact {
+        margin: 100px 30px;
+    }
 }
 
 
 
+/* --------------------------------------Footer----------------------------------------------- */
 
+.footer {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+}
 
-/* --------------------------------------PROJETS----------------------------------------------- */
+.footer-infos{
+    display : flex;
+    flex-direction: row;
+}
+
+.footer-contact ul{
+    display: flex;
+    
+}
+
+.footer-contact li{
+    color: rgb(0, 0, 0);
+}
+
+.footer-nav a{
+    color: rgb(0, 0, 0);
+}   
 
