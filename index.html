@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
     <title>Document</title>
 </head>
 <body>
     <section class="hero">
         <div class="top-Hero">
-            <img src="img/etoile.png" alt="#">
-            <img src="img/LOGO_no_color 1.png" alt="#">
+            <img id="top-star" src="img/etoile.svg" alt="#">
+            <img id="-mini-logo" src="img/LOGO_no_color 1.svg" alt="#">
         </div>
-        <div>
-            <img src="img/LOGO_principal.png" alt="#">
+        <div class="nav-hero">
+            <img src="img/LOGO_principal.svg" alt="#">
             <h1>Portfolio</h1>
         </div>
         <nav>
@@ -29,11 +30,16 @@
             <h1 class="titre-section">À Propos</h1>
             <img src="img/circle_apropos.png" alt="#">
         </div>
-        <div class="a-propos-content">
-            <h1>Étudiant en digital passionné par le développement informatique</h1>
-            <p>Actuellement en bachelor 2 à l'école My Digital School, animé par un besoin de création, je cherche constament à sortir de ma zone de confort pour apprendre de nouvelle chose. <br> J'aime découvrir un projet me lapproprier afin de mieux le comprendre pour ensuite proposer le meilleur de moi même dans ça réalisation.</br></p>
-            <button class="btn">Télécharger mon cv</button>
-        </div>
+            <div class="a-propos-content">
+                <div class="a-propos-description">
+                    <h1>Étudiant en digital passionné par le développement informatique</h1>
+                    <p>Actuellement en bachelor 2 à l'école My Digital School, animé par un besoin de création, je cherche constament à sortir de ma zone de confort pour apprendre de nouvelle chose. <br> J'aime découvrir un projet me lapproprier afin de mieux le comprendre pour ensuite proposer le meilleur de moi même dans ça réalisation.</br></p>
+                    <button class="btn">Télécharger mon cv</button>
+                </div>
+                <div class="a-propos-img">
+                    <img src="img/me.png" alt="#">
+                </div>
+            </div>
         <div class="competence">
             <div classe="title-competence">
                 <img src="img/nav_circle.png" alt="#">
@@ -55,7 +61,7 @@
     </section>
     <section class="title-portfolio">
 
-        <img src="img/portfolio.png" alt="#">
+        <img id="imgPortfolio" src="img/portfolio.png" alt="#">
         <div class="#">
             <h1 class="title-projet"></h1>
         </div>
@@ -162,7 +168,7 @@
                 </div>
                 <div>
                     <h1>Réseaux</h1>
-                    <div class="social">
+                    <div class="social">    
                         <img src="img/instagram.png" alt="#">
                         <img src="img/github.png" alt="#">
                         <img src="img/linkedin.png" alt="#">
