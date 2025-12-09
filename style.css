@@ -80,12 +80,12 @@ a {
     margin: 150px 80px;
 } 
 
-.titre-a-propos {
+.titre-container {
     display: flex;
     flex-direction: row;
     align-items: baseline;
 }
-.titre-a-propos img {
+.titre-container img {
     width: 100px;
     height: 100px;
     margin-left: 20px;
@@ -182,7 +182,7 @@ a {
 .list-projet {
     display: flex;
     flex-direction: column;
-    margin: 0 80px;
+    margin: 150px 80px;
 }
 
 .projet {
@@ -193,7 +193,7 @@ a {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 60px;
     margin-bottom: 20px;
 }
 
@@ -214,16 +214,16 @@ a {
 }
 .description-projet p:first-child {
     margin: 0;
-    padding-right: 18px;
-    border-right: 2px solid rgba(255,255,255,0.12);
+    padding: 8px 18px;
+    border: #0040FF 1px solid;
+
 }
 .description-projet p:last-child {
     margin: 0;
-    padding-left: 18px;
+    padding: 8px 18px;
+    border: #FF1D1D 1px solid;
+    
 }
-
-/* --------------------------------------HEADER-------------------------------------------------- */
-
 
 
 
@@ -232,8 +232,9 @@ a {
     margin-bottom: 20px;
 }
 
-/* --------------------------------------PROJETS----------------------------------------------- */
+
 /* separate the project number and the project title visually */
+
 .list-projet .projet > div:first-child {
     display: flex;
     align-items: center;
@@ -278,3 +279,16 @@ a {
         padding-left: 0;
     }
 }
+
+/* --------------------------------------Contact-------------------------------------------------- */
+
+.contact{
+    margin: 150px 80px;
+}
+
+
+
+
+
+/* --------------------------------------PROJETS----------------------------------------------- */
+
