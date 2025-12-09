@@ -146,6 +146,13 @@ a {
     flex-direction: row;
     align-items: center;
     margin-bottom: 40px;
+    letter-spacing: 0.08rem;
+}
+
+.title-competence img {
+    width: 18px;
+    height: 18px;
+    margin: 0 20px;
 }
 
 .content-competence {
@@ -153,9 +160,59 @@ a {
     justify-content: space-around;
     width: 100%;
     font-size: 32px;
-    letter-spacing: 0.0 5rem;
+    letter-spacing: 0.08rem;
 }
-/* --------------------------------------HEADER-------------------------------------------------- */
+/* --------------------------------------Projet-------------------------------------------------- */
+
+.title-portfolio-text{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 48px;
+    border-top: white 1px solid;
+    border-bottom: white 1px solid;
+    display: inline-block;
+    letter-spacing: 2px;
+}
+
+.title-projet{
+    margin: 10px 110px;
+}
+
+.list-projet {
+    display: flex;
+    flex-direction: column;
+    margin: 0 80px;
+}
+
+.projet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 30px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.num-projet {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 30%;
+    padding: 0px 30px;
+    
+}
+
+.description-projet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}   
+
 /* --------------------------------------HEADER-------------------------------------------------- */
 
 
