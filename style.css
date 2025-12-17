@@ -54,6 +54,8 @@ Body {
     margin-top: 10px;
 }
 
+
+
 ul {
     display: flex;
     justify-content: center;
@@ -489,3 +491,37 @@ a {
     margin-top: 10px;
 }
 
+
+
+/* --------------------------------------Animation Flip Lettres-------------------------------------------------- */
+
+.text-flip {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.letter {
+    display: inline-block;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+/* Animation pour les lettres alternées */
+.text-flip:hover .letter.flip {
+    transform: rotateY(180deg);
+}
+
+/* Optionnel : couleur différente pour les lettres qui tournent */
+.letter.flip {
+    color: #ffffff;
+}
+
+/* Pour les titres de projet */
+.num-projet h1 .text-flip {
+    display: inline;
+}
+
+/* Pour que l'animation fonctionne sur plusieurs éléments */
+.titre-section.text-flip .letter {
+    display: inline-block;
+}
