@@ -8,8 +8,20 @@ Body {
 }
 
 /* --------------------------------------HEADER-------------------------------------------------- */
-
-
+.home-icon {
+    display: flex;
+    justify-content: right;
+    margin: 50px 80px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin-top: 20px;
+}
 .content-hero{
     margin: 80px 80px;
 }
@@ -21,7 +33,7 @@ Body {
 ul {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 100px;
 }
 
 li {
@@ -42,7 +54,7 @@ a {
         align-items: center;    
     }
     #nsd-logo img {
-        height: 400px;
+        height: 200px;
     }
     #title_projet h1 {
         font-size: 200px;
@@ -59,6 +71,15 @@ a {
     margin: 0 80px;
     gap: 100px;
 }
+.prez-text {
+    width: 50%;
+}
+.prez-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .prez-text h1 {
     font-size: 48px;
@@ -72,7 +93,10 @@ a {
     margin: 40px 0;
 }
 .prez-img img {
-    width: 600px;
+    width: 100%;     /* L'image s'adapte à son conteneur */
+    height: auto;    /* Garde les proportions */
+    display: block;  /* Évite l'espace fantôme sous les images inline */
+    object-fit: cover; /* S'assure que l'image remplit bien le cadre si besoin */
 }
 
 
@@ -99,15 +123,22 @@ a {
 .asso-work {
     display: flex;
     flex-direction: column;
-    margin: 40px 80px;
+    margin: 80px 80px;
     gap: 40px; 
 }
 .top-content{
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
 }
-
+.asso-img img {
+     width: 100%;     /* L'image s'adapte à son conteneur */
+    height: auto;    /* Garde les proportions */
+    display: block;  /* Évite l'espace fantôme sous les images inline */
+    object-fit: cover; /* S'assure que l'image remplit bien le cadre si besoin */
+}
 .top-content .top-text{
     width: 45%;
 }
@@ -132,14 +163,14 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 10px;
+    gap: 60px;
 }
 .bottom-text-l {
-    width: 48%;
+    width: 45%;
 }
 
 .bottom-text-r {
-    width: 43%;
+    width: 50%;
 }
 
 /* --------------------------------------drift-transition-------------------------------------------------- */
@@ -155,23 +186,6 @@ a {
 }
 
 /* --------------------------------------Mon rôle-------------------------------------------------- */
-
-/* .top-role {
-    display: flex;
-    flex-direction: row;
-    margin: 40px 80px;
-    gap: 40px; 
-}
-.top-text ul {
-    font-family: "work sans", sans-serif;
-    font-size: 20px;
-    line-height: 1;
-    display: flex;
-    flex-direction:column;
-} */
-/* =========================================
-   Section: Mon Rôle (Reproduction de l'image)
-   ========================================= */
 
 /* Conteneur principal de la section */
 .mon-role {
@@ -270,105 +284,145 @@ a {
     width: 50%;
 }
 
-
-/* --------------------------------------Footer-------------------------------------------------- */
-
-.footer {
-    margin-top: 100px;
-    border: 80px solid #ffffff;
+/* --------------------------------------Découvrir le site-------------------------------------------------- */
+.nsd-demo {
     display: flex;
-    flex-direction: row;
-    gap: 10%;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px 0;
+}
+.nsd-demo button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 200px;
+    font-size: 38px;
+    font-family: "Bebas Neue", cursive;
+    background-color: #D98148;
+    color: white;
+}
+.nsd-demo button :hover {
     background-color: #ffffff;
 }
+/* --------------------------------------Footer-------------------------------------------------- */
 
-.footer-logo p{
-    font-family: 'work sans', sans-serif;
+footer {
+    background-color: white; /* Fond blanc comme sur l'image */
+    color: black; /* Texte en noir */
+    padding: 60px 80px; /* Marges internes */
+    margin-top: 80px; /* Séparation avec la section précédente */
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Sépare le bloc gauche du bloc droit */
+    align-items: flex-start;
+}
+
+/* --- Colonne Gauche (Logo + Slogan + Réseaux) --- */
+.footer-logo-container {
+    display: flex;
+    flex-direction: column;
+    width: 45%; /* Prend presque la moitié de la largeur */
+    gap: 20px; /* Espace entre le slogan et la partie "Réseaux" */
+}
+
+.footer-logo img {
+    width: 600px; /* Ajustez selon la taille réelle de votre logo IOULIAN */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer-logo p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    color: black;
+    max-width: 400px; /* Pour éviter que le slogan ne soit trop long */
+}
+
+/* Titre "RESEAUX" et icônes */
+.footer-social h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 48px; /* Taille réduite par rapport au reste du site */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: black;
+}
+
+.social {
+    display: flex;
+    gap: 20px; /* Espace entre les icônes */
+}
+
+.social img {
+    width: 42px; /* Taille des icônes instagram/linkedin/github */
+    height: auto;
+    filter: brightness(0); /* Force les icônes en noir si elles sont colorées */
+}
+
+/* --- Colonne Droite (Contact + Navigation) --- */
+.footer-info {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: flex-start; /* Aligne les colonnes à gauche du bloc droit */
+    gap: 190px; /* Grand espace entre la colonne Contact et la colonne Nav */
+}
+
+/* Styles communs pour Contact et Nav */
+.footer-contact, 
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Titres des colonnes (CONTACT / NAV) */
+.footer-contact h1, 
+.footer-nav h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 48px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: black;
+}
+
+/* Réinitialisation des listes pour le footer (pour annuler le flex center du header) */
+.footer-contact ul, 
+.footer-nav ul {
+    display: flex;
+    flex-direction: column; /* Liste verticale */
+    margin: 0;
+    padding: 0;
+    gap: 15px; /* Espace entre les éléments de liste */
+    align-items: flex-start; /* Alignement à gauche */
+}
+
+.footer-contact li, 
+.footer-nav li {
+    list-style: none;
+    margin: 0; /* Annule les marges du header */
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    color: black;
+}
+
+/* Liens (numéro, email, menu) */
+.footer-contact li, 
+.footer-nav a {
+    text-decoration: none;
+    color: black;
     font-size: 20px;
-    color: rgb(0, 0, 0);
-    
-
+    transition: opacity 0.3s;
 }
 
-.footer-info{
-    display : flex;
-    flex-direction: row;
-    gap: 40px;
+.footer-nav a:hover {
+    text-decoration: underline; /* Petit effet au survol */
 }
-
-.footer-contact{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 100px;
-}
-.footer-contact h1{
-    display: flex;
-    flex-direction: column;
-    color: rgb(0, 0, 0);
-}
-.footer-contact ul{
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-}
-
-.footer-contact li{
-    color: rgb(0, 0, 0);
-    font-family: 'work sans', sans-serif;
-    margin: 0;
-}
-
-.footer-nav{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 100px;
-}
-
-.footer-nav h1{
-    display: flex;
-    flex-direction: column;
-    color: rgb(0, 0, 0);
-}
-
-.footer-nav ul{
-    display: flex;
-    flex-direction: column;
-    color: rgb(0, 0, 0);
-    padding: 0;
-    
-}
-
-.footer-nav a{
-    color: rgb(0, 0, 0);
-    margin: 0;
-    font-family: 'work sans', sans-serif;
-}   
-
-.footer-social{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 100px;
-}
-
-.footer-social h1{
-    display: flex;
-    flex-direction: column;
-    color: rgb(0, 0, 0);
-}
-
-.footer-social .social{
-    
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    margin-top: 10px;
-}
-
-
-
 
 /* --------------------------------------HEADER-------------------------------------------------- */
 

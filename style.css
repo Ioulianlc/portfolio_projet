@@ -128,20 +128,80 @@ a {
 
 .btn {
     background-color: #0040FF;
+    font-family: "work sans", sans-serif;
     color: white;
     border: none;
     margin-top: 80px;
     padding: 15px 30px;
-    font-size: 20px;
+    font-size: 24px;
     cursor: pointer;
     
 }
+.btn:hover {
+    background-color: #ffffff;
+    border: #0040FF 2px solid;
+    color: #0040FF;
+    transition: 1.2s;
+}
 
-.competence {
+/* Le conteneur qui sert de masque (fenêtre) */
+.title-competence {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    margin-top: 80px;
+    justify-content: center; /* Ajoute cette ligne */
+    margin-top: 100px;
+    margin-bottom: 40px;
+    letter-spacing: 0.08rem;
+    width: 100%; /* S'assure que le conteneur prend toute la largeur pour bien se centrer */
+}
+.content-competence {
+    width: 100%;
+    overflow: hidden; /* Masque ce qui sort de l'écran */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    position: relative;
+    padding: 20px 0; /* Un peu d'espace vertical */
+}
+
+/* La bande qui contient tous les h4 et qui va bouger */
+.competence-track {
+    display: flex;
+    flex-direction: row;
+    width: max-content; /* La largeur s'adapte au contenu total */
+    gap: 60px; /* L'espace entre chaque mot */
+    
+    /* L'animation */
+    /* 20s = vitesse (plus le chiffre est bas, plus c'est rapide) */
+    /* linear = vitesse constante sans accélération */
+    /* infinite = boucle pour toujours */
+    animation: scroll-right 20s linear infinite;
+}
+
+/* Style des textes */
+.competence-track h4 {
+    margin: 0; /* On retire les marges par défaut pour gérer l'espace avec gap */
+    font-size: 32px; /* Ta taille d'origine */
+    letter-spacing: 0.08rem;
+    color: white; /* Assure-toi que la couleur est bonne */
+    flex-shrink: 0; /* Empêche les mots de s'écraser */
+}
+
+/* Définition de l'animation de GAUCHE vers la DROITE */
+@keyframes scroll-right {
+    0% {
+        /* On commence avec la bande décalée de 50% vers la gauche */
+        /* (On voit donc la deuxième moitié, la copie) */
+        transform: translateX(-50%);
+    }
+    100% {
+        /* On finit à 0 (position initiale) */
+        /* (On voit la première moitié, l'original) */
+        /* Le mouvement va donc de -50% vers 0% => vers la DROITE */
+        transform: translateX(0);
+    }
+}
+.content-competence:hover .competence-track {
+    animation-play-state: paused;
 }
 
 .title-competence {
@@ -192,7 +252,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0px 30px;
+    padding: 10px 30px;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     width: 100%;
@@ -204,12 +264,14 @@ a {
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    width: 30%;
+    width: 50%;
     padding: 0px 30px;
     
 }
 .num-projet a h1 {
-    font-size: 48px;
+    font-size: 30px; /* Maintenant aligné avec les autres titres */
+    color: white;    /* Pour s'assurer qu'il reste blanc malgré le lien */
+    margin: 0;       /* Pour éviter les décalages verticaux */
 }
 
 .description-projet {
@@ -401,100 +463,123 @@ a {
 
 /* --------------------------------------Footer----------------------------------------------- */
 
+footer {
+    background-color: white; /* Fond blanc comme sur l'image */
+    color: black; /* Texte en noir */
+    padding: 60px 80px; /* Marges internes */
+    margin-top: 80px; /* Séparation avec la section précédente */
+}
+
 .footer {
-    margin-top: 100px;
-    border: 80px solid #ffffff;
     display: flex;
     flex-direction: row;
-    gap: 10%;
-    background-color: #ffffff;
+    justify-content: space-between; /* Sépare le bloc gauche du bloc droit */
+    align-items: flex-start;
 }
 
-.footer-logo p{
-    font-family: 'work sans', sans-serif;
+/* --- Colonne Gauche (Logo + Slogan + Réseaux) --- */
+.footer-logo-container {
+    display: flex;
+    flex-direction: column;
+    width: 45%; /* Prend presque la moitié de la largeur */
+    gap: 20px; /* Espace entre le slogan et la partie "Réseaux" */
+}
+
+.footer-logo img {
+    width: 600px; /* Ajustez selon la taille réelle de votre logo IOULIAN */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer-logo p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    color: black;
+    max-width: 400px; /* Pour éviter que le slogan ne soit trop long */
+}
+
+/* Titre "RESEAUX" et icônes */
+.footer-social h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 48px; /* Taille réduite par rapport au reste du site */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: black;
+}
+
+.social {
+    display: flex;
+    gap: 20px; /* Espace entre les icônes */
+}
+
+.social img {
+    width: 42px; /* Taille des icônes instagram/linkedin/github */
+    height: auto;
+    filter: brightness(0); /* Force les icônes en noir si elles sont colorées */
+}
+
+/* --- Colonne Droite (Contact + Navigation) --- */
+.footer-info {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: flex-start; /* Aligne les colonnes à gauche du bloc droit */
+    gap: 190px; /* Grand espace entre la colonne Contact et la colonne Nav */
+}
+
+/* Styles communs pour Contact et Nav */
+.footer-contact, 
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Titres des colonnes (CONTACT / NAV) */
+.footer-contact h1, 
+.footer-nav h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 48px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: black;
+}
+
+/* Réinitialisation des listes pour le footer (pour annuler le flex center du header) */
+.footer-contact ul, 
+.footer-nav ul {
+    display: flex;
+    flex-direction: column; /* Liste verticale */
+    margin: 0;
+    padding: 0;
+    gap: 15px; /* Espace entre les éléments de liste */
+    align-items: flex-start; /* Alignement à gauche */
+}
+
+.footer-contact li, 
+.footer-nav li {
+    list-style: none;
+    margin: 0; /* Annule les marges du header */
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    color: black;
+}
+
+/* Liens (numéro, email, menu) */
+.footer-contact li, 
+.footer-nav a {
+    text-decoration: none;
+    color: black;
     font-size: 20px;
-    color: rgb(0, 0, 0);
-    
-
+    transition: opacity 0.3s;
 }
 
-.footer-info{
-    display : flex;
-    flex-direction: row;
-    gap: 40%;
+.footer-nav a:hover {
+    text-decoration: underline; /* Petit effet au survol */
 }
-
-.footer-contact{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 100px;
-}
-.footer-contact h1{
-    display: flex;
-    flex-direction: column;
-    color: rgb(0, 0, 0);
-}
-.footer-contact ul{
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-}
-
-.footer-contact li{
-    color: rgb(0, 0, 0);
-    font-family: 'work sans', sans-serif;
-    margin: 0;
-}
-
-.footer-nav{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 100px;
-}
-
-.footer-nav h1{
-    display: flex;
-    flex-direction: column;
-    color: rgb(0, 0, 0);
-}
-
-.footer-nav ul{
-    display: flex;
-    flex-direction: column;
-    color: rgb(0, 0, 0);
-    padding: 0;
-    
-}
-
-.footer-nav a{
-    color: rgb(0, 0, 0);
-    margin: 0;
-    font-family: 'work sans', sans-serif;
-}   
-
-.footer-social{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 100px;
-}
-
-.footer-social h1{
-    display: flex;
-    flex-direction: column;
-    color: rgb(0, 0, 0);
-}
-
-.footer-social .social{
-    
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    margin-top: 10px;
-}
-
 
 
 /* --------------------------------------Animation Flip Lettres-------------------------------------------------- */
