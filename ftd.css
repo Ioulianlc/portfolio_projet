@@ -1,0 +1,433 @@
+Body {
+    background-color: black;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------------------------------HEADER-------------------------------------------------- */
+.home-icon {
+    display: flex;
+    justify-content: right;
+    margin: 50px 80px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin-top: 20px;
+}
+.content-hero{
+    margin: 80px 80px;
+}
+
+.top-hero nav {
+    margin-top: 20px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+li {
+    list-style: none;
+    color: white;
+    margin: 0 12%;
+    
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}  
+    #ftd-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+    }
+    #ftd-logo img {
+        height: 400px;
+    }
+    #title_projet h1 {
+        font-size: 200px;
+        margin: 0 auto;
+        letter-spacing: 0.05em;
+    }
+    .tspan {
+        color: #FFD300;
+    }
+/* --------------------------------------Présentation-------------------------------------------------- */
+
+.presentation {
+    display: flex;
+    margin: 0 80px;
+    gap: 100px;
+}
+.prez-text {
+    width: 50%;
+}
+.prez-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prez-text h1 {
+    font-size: 48px;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+}
+.prez-text p {
+    font-family: 'work sans', sans-serif;
+    font-size: 20px;
+    line-height: 1;
+    margin: 40px 0;
+}
+.prez-img img {
+    width: 100%;     /* L'image s'adapte à son conteneur */
+    height: auto;    /* Garde les proportions */
+    display: block;  /* Évite l'espace fantôme sous les images inline */
+    object-fit: cover; /* S'assure que l'image remplit bien le cadre si besoin */
+}
+
+
+
+
+/* --------------------------------------Transition 1-------------------------------------------------- */
+
+.img-transition {
+    display: flex;
+    flex-direction: row;
+    margin: 40px 80px;
+    height: 600px;
+}
+
+.img1, .img2 {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* --------------------------------------Mon role dans l'association-------------------------------------------------- */
+
+.ftd-work {
+    display: flex;
+    flex-direction: column;
+    margin: 80px 80px;
+    gap: 40px; 
+}
+.top-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+.ftd-img img {
+     width: 100%;     /* L'image s'adapte à son conteneur */
+    height: auto;    /* Garde les proportions */
+    display: block;  /* Évite l'espace fantôme sous les images inline */
+    object-fit: cover; /* S'assure que l'image remplit bien le cadre si besoin */
+}
+.top-content .top-text{
+    width: 45%;
+}
+.top-content h1 {
+    font-size: 48px;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+}
+.top-content p {
+    font-family: "work sans", sans-serif;
+    font-size: 20px;
+    line-height: 1;
+    margin: 40px 0;
+}
+
+.bottom-content p {
+    font-family: "work sans", sans-serif;
+    font-size: 20px;
+    line-height: 1;
+}
+.bottom-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+}
+.bottom-text-l {
+    width: 45%;
+}
+
+.bottom-text-r {
+    width: 50%;
+}
+
+/* --------------------------------------drift-transition-------------------------------------------------- */
+.shoot-transition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 80px;
+}
+.shoot-img {
+    width: 100% ;
+    
+}
+
+/* --------------------------------------Mon rôle-------------------------------------------------- */
+
+/* Conteneur principal de la section */
+.mon-role {
+    margin: 80px 80px; /* Garde les marges cohérentes avec le reste du site */
+    color: white; /* S'assure que tout le texte est blanc */
+}
+
+/* --- Partie Supérieure (Titre/Liste vs Image) --- */
+
+.top-role {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Écarte les deux blocs */
+    align-items: center; /* Aligne le haut du texte avec le haut de l'image */
+    gap: 60px; /* Espace important entre le bloc texte et l'image */
+}
+
+/* Bloc texte supérieur gauche */
+.top-role .top-text {
+    width: 45%; /* Prend un peu moins de la moitié de la largeur */
+}
+
+/* Titre H1 (devrait idéalement être un H2 sémantiquement) */
+.top-text h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 40px; /* Espace sous le titre comme sur l'image */
+    color: white;
+}
+
+/* Styles pour les paragraphes et textes courants de cette section */
+.mon-role p, 
+.top-text li {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px; /* Légèrement plus petit que les 20px d'avant pour coller à l'image */
+    line-height: 1.5; /* Bonne hauteur de ligne pour la lisibilité */
+    color: #f0f0f0; /* Un blanc très légèrement cassé est moins agressif sur fond noir */
+}
+
+/* Introduction avant la liste */
+.top-text p {
+    margin-bottom: 20px;
+}
+
+/* --- Gestion de la liste à puces --- */
+/* IMPORTANT : Il faut écraser les styles "ul" et "li" généraux de votre navbar */
+
+.top-text ul {
+    display: flex;
+    flex-direction: column; /* Remet la liste en colonne */
+    margin: 0;
+    padding-left: 25px; /* Espace pour les puces */
+    justify-content: flex-start; /* Annule le 'center' de la nav */
+}
+
+.top-text li {
+    list-style-type: disc; /* Force l'affichage des puces rondes */
+    margin: 0 0 15px 0; /* Annule les marges latérales de la nav et ajoute de l'espace en bas */
+    padding: 0;
+    color: #f0f0f0;
+}
+
+
+/* Bloc image supérieur droit */
+.top-role .top-img {
+    width: 50%; /* L'image semble prendre la moitié de l'espace ou un peu plus */
+}
+
+.role-img {
+    width: 100%;     /* L'image s'adapte à son conteneur */
+    height: auto;    /* Garde les proportions */
+    display: flex;  /* Évite l'espace fantôme sous les images inline */
+    object-fit: cover; /* S'assure que l'image remplit bien le cadre si besoin */
+}
+
+
+/* --- Partie Inférieure (Les deux paragraphes de compétences) --- */
+
+.bottom-role {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px; /* Même écart que la partie supérieure pour l'alignement */
+    margin-top: 60px; /* Espace important entre le haut et le bas */
+}
+
+/* Pour que les textes du bas s'alignent verticalement avec ceux du haut,
+   on utilise des largeurs similaires */
+.left-role {
+    width: 45%; 
+}
+
+.right-role {
+    width: 50%;
+}
+
+/* --------------------------------------Découvrir le site-------------------------------------------------- */
+.ftd-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px 0;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 200px;
+    font-size: 38px;
+    font-family: "Bebas Neue", cursive;
+    background-color: #FFD300;
+    border: none;
+}
+.btn:hover {
+    background-color: #000000;
+    border: 1px solid #FFD300;
+    transition: 0.5s;
+
+}
+/* --------------------------------------Footer-------------------------------------------------- */
+
+footer {
+    background-color: white; /* Fond blanc comme sur l'image */
+    color: black; /* Texte en noir */
+    padding: 60px 80px; /* Marges internes */
+    margin-top: 80px; /* Séparation avec la section précédente */
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Sépare le bloc gauche du bloc droit */
+    align-items: flex-start;
+}
+
+/* --- Colonne Gauche (Logo + Slogan + Réseaux) --- */
+.footer-logo-container {
+    display: flex;
+    flex-direction: column;
+    width: 45%; /* Prend presque la moitié de la largeur */
+    gap: 20px; /* Espace entre le slogan et la partie "Réseaux" */
+}
+
+.footer-logo img {
+    width: 600px; /* Ajustez selon la taille réelle de votre logo IOULIAN */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer-logo p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    color: black;
+    max-width: 400px; /* Pour éviter que le slogan ne soit trop long */
+}
+
+/* Titre "RESEAUX" et icônes */
+.footer-social h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 48px; /* Taille réduite par rapport au reste du site */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: black;
+}
+
+.social {
+    display: flex;
+    gap: 20px; /* Espace entre les icônes */
+}
+
+.social img {
+    width: 42px; /* Taille des icônes instagram/linkedin/github */
+    height: auto;
+    filter: brightness(0); /* Force les icônes en noir si elles sont colorées */
+}
+
+/* --- Colonne Droite (Contact + Navigation) --- */
+.footer-info {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: flex-start; /* Aligne les colonnes à gauche du bloc droit */
+    gap: 190px; /* Grand espace entre la colonne Contact et la colonne Nav */
+}
+
+/* Styles communs pour Contact et Nav */
+.footer-contact, 
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Titres des colonnes (CONTACT / NAV) */
+.footer-contact h1, 
+.footer-nav h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 48px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: black;
+}
+
+/* Réinitialisation des listes pour le footer (pour annuler le flex center du header) */
+.footer-contact ul, 
+.footer-nav ul {
+    display: flex;
+    flex-direction: column; /* Liste verticale */
+    margin: 0;
+    padding: 0;
+    gap: 15px; /* Espace entre les éléments de liste */
+    align-items: flex-start; /* Alignement à gauche */
+}
+
+.footer-contact li, 
+.footer-nav li {
+    list-style: none;
+    margin: 0; /* Annule les marges du header */
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    color: black;
+}
+
+/* Liens (numéro, email, menu) */
+.footer-contact li, 
+.footer-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition: opacity 0.3s;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline; /* Petit effet au survol */
+}
+
+/* --------------------------------------HEADER-------------------------------------------------- */
+
+
+/* --------------------------------------HEADER-------------------------------------------------- */
