@@ -1,3 +1,8 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
 Body {
     background-color: black;
     color: white;
@@ -46,6 +51,7 @@ Body {
     align-items: center;
     flex-direction: column;
     margin-top: 80px;
+    margin-bottom: 40px;
 }
 
 .nav-hero h1 {
@@ -58,7 +64,6 @@ Body {
 
 ul {
     display: flex;
-    justify-content: center;
     margin-top: 20px;
 }
 
@@ -67,8 +72,12 @@ li {
     color: white;
     margin: 0 12%;
     gap: 10px;
-    
+    display: flex;       /* Active le mode Flexbox pour que GAP fonctionne */
+    gap: 10px;           /* Espace entre le lien (texte) et l'image */
+    align-items: center; /* Aligne l'image et le texte sur la même ligne horizontale */
 }
+    
+
 
 a {
     text-decoration: none;

@@ -24,15 +24,7 @@ function addFlipEffect(selector) {
 
 // Appliquer l'effet sur différents éléments de votre page
 document.addEventListener('DOMContentLoaded', function() {
-    // Sur le titre "À Propos"
-    addFlipEffect('.titre-section');
-    
-    // Sur les titres de projets
-    addFlipEffect('.num-projet h1:nth-child(2)');
-    
     // Sur les liens de navigation (optionnel)
     addFlipEffect('nav a');
     
-    // Sur le titre "Portfolio" dans le header
-    addFlipEffect('.nav-hero h1');
 });
