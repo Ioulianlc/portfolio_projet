@@ -54,6 +54,11 @@ Body {
     margin-bottom: 40px;
 }
 
+.nav-hero img {
+    height: 90%;
+    width: 90%;
+}
+
 .nav-hero h1 {
     font-size: 48px;
     letter-spacing: 2px;
@@ -112,7 +117,7 @@ a {
     padding-right: 40px;
 }
 .a-propos-img {
-    width: 40%;
+    width: 50%;
 }
 .a-propos-description h1 {
     font-size: 48px;
@@ -409,6 +414,22 @@ a {
 .form-group input:focus {
     border-bottom: 1px solid #ffffff; /* Ligne blanche au focus */
 }
+.form-group textarea {
+    width: 100%;
+    background-color: transparent; /* Fond transparent */
+    border: none;
+    border-bottom: 1px solid #555; /* Ligne grise */
+    padding: 10px 0;
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    transition: border-color 0.3s;
+    font-family: 'work sans', sans-serif;
+}
+
+.form-group textarea:focus {
+    border-bottom: 1px solid #ffffff; /* Ligne blanche au focus */
+}
 
 /* --- LE BOUTON --- */
 .btn-container {
@@ -419,18 +440,20 @@ a {
 }
 
 .btn-container button {
-    background-color: #d9d9d9;
+    background-color: #0040FF;
+    color: #ffffff;
     border: none;
     padding: 15px 50px; /* Taille du rectangle */
     font-size: 18px;
     font-family: 'work sans', sans-serif;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.5s;
     font-weight: bold;
 }
 
 .btn-container button:hover {
     background-color: #ffffff;
+    color: #0040FF;
 }
 
 /* --- PARTIE DROITE : IMAGE --- */
@@ -442,30 +465,9 @@ a {
 }
 
 .img-contact img {
-    width: 225px;
-    height: 450px;
+    width: 70%;
+    height: 70%;
     object-fit: contain;
-}
-
-/* --- RESPONSIVE MOBILE --- */
-@media (max-width: 900px) {
-    .contact-container {
-        flex-direction: column-reverse; /* Sur mobile, l'image passe au dessus ou dessous selon préférence */
-        gap: 40px;
-    }
-
-    .form-content {
-        max-width: 100%;
-    }
-
-    .img-contact {
-        width: 100%;
-        justify-content: center;
-    }
-    
-    .contact {
-        margin: 100px 30px;
-    }
 }
 
 
@@ -622,4 +624,125 @@ footer {
 /* Pour que l'animation fonctionne sur plusieurs éléments */
 .titre-section.text-flip .letter {
     display: inline-block;
+}
+
+
+
+
+/* =========================================
+   VERSION MOBILE (Écrans < 900px)
+   ========================================= */
+@media (max-width: 900px) {
+
+    /* 1. ON RÉDUIT LES MARGES GÉNÉRALES */
+    .a-propos, 
+    .list-projet, 
+    .contact, 
+    footer {
+        margin: 60px 20px; /* On passe de 150px à 60px pour aérer sans écraser */
+        padding: 0;
+    }
+
+    /* 2. HEADER & NAV */
+    .nav-hero img {
+        height: 90%;
+        width: 90%;
+    }
+    .nav-hero h1 {
+        font-size: 32px; /* Plus petit */
+    }
+    nav ul {
+        flex-direction: row; /* Menu vertical */
+        align-items: center;
+        padding: 0;
+        gap: 20px;
+    }
+    nav ul li {
+        margin: 0; /* On enlève les grosses marges latérales */
+    }
+
+    /* 3. À PROPOS (Gros changement) */
+    .titre-section {
+        font-size: 80px; /* On passe de 360px (énorme) à 80px */
+        line-height: 1;
+    }
+    .titre-container img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .a-propos-content {
+        flex-direction: column-reverse; /* L'image passe au-dessus ou en dessous du texte */
+        gap: 40px;
+    }
+    .a-propos-description, 
+    .a-propos-img {
+        width: 100%; /* Ils prennent toute la largeur */
+        padding: 0;
+    }
+    .a-propos-description h1 {
+        font-size: 32px; /* Titre plus lisible */
+    }
+
+    /* 4. PROJETS */
+    .projet {
+        flex-direction: column; /* Les projets s'empilent */
+        gap: 20px;
+        align-items: flex-start;
+    }
+    .num-projet {
+        width: 100%;
+        padding: 0;
+    }
+    .description-projet {
+        width: 100%;
+        flex-wrap: wrap; /* Si les tags sont trop longs, ils passent à la ligne */
+    }
+
+    /* 5. CONTACT */
+
+    .contact-title-img{
+        max-width: 20%;
+
+    }
+    .contact-container {
+        flex-direction: row; /* Formulaire au-dessus, image en dessous */
+        margin: 0;
+    }
+    .form-content {
+        max-width: 100%; /* Le formulaire prend toute la place */
+    }
+    .img-contact {
+        display: none;
+    }
+    .btn-container {
+        justify-content: center; /* Bouton centré */
+    }
+
+    /* 6. FOOTER */
+    footer {
+        padding: 40px 20px;
+    }
+    .footer {
+        flex-direction: column;
+        gap: 60px;
+    }
+    .footer-logo-container, 
+    .footer-info {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-logo img {
+        width: 100%; /* Le logo s'adapte à l'écran */
+        max-width: 300px;
+    }
+    .footer-info {
+        flex-direction: column; /* Contact et Nav l'un sous l'autre */
+        gap: 40px;
+    }
+    .footer-contact ul, 
+    .footer-nav ul {
+        align-items: center; /* On centre tout le texte */
+    }
 }
