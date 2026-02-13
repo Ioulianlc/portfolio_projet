@@ -675,6 +675,17 @@ footer {
         flex-direction: column-reverse; /* L'image passe au-dessus ou en dessous du texte */
         gap: 40px;
     }
+    .a-propos-img img {
+        width: 80%; /* Mets la valeur que tu veux (ex: 150px, 80%, etc.) */
+        height: auto; /* Garde les proportions, ne déforme pas l'image */
+        display: block; 
+        margin: 0 auto; /* Centre l'image horizontalement */
+    }
+    .titre-container img {
+        width: 40px;  /* Plus petit sur mobile */
+        height: 40px;
+        margin-left: 10px; /* Réduit un peu la marge aussi */
+    }
     .a-propos-description, 
     .a-propos-img {
         width: 100%; /* Ils prennent toute la largeur */
@@ -701,8 +712,8 @@ footer {
 
     /* 5. CONTACT */
 
-    .contact-title-img{
-        max-width: 20%;
+    .contact-title-img img{
+        max-width: 30%;
 
     }
     .contact-container {

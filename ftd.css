@@ -44,7 +44,10 @@ li {
     list-style: none;
     color: white;
     margin: 0 12%;
-    
+    gap: 10px;
+    display: flex;       /* Active le mode Flexbox pour que GAP fonctionne */
+    gap: 10px;           /* Espace entre le lien (texte) et l'image */
+    align-items: center; /* Aligne l'image et le texte sur la même ligne horizontale */
 }
 
 a {
