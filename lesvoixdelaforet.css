@@ -55,16 +55,16 @@ a {
     color: white;
     font-size: 24px;
 }  
-    #ftd-logo {
+    #LVDF-logo {
         display: flex;
         justify-content: center;
         align-items: center;    
     }
-    #ftd-logo img {
+    #LVDF-logo img {
         height: 400px;
     }
     #title_projet h1 {
-        font-size: 200px;
+        font-size: 180px;
         margin: 0 auto;
         letter-spacing: 0.05em;
     }
@@ -127,7 +127,7 @@ a {
 
 /* --------------------------------------Mon role dans l'association-------------------------------------------------- */
 
-.ftd-work {
+.lvdf-work {
     display: flex;
     flex-direction: column;
     margin: 80px 80px;
@@ -140,7 +140,7 @@ a {
     align-items: flex-start;
     gap: 60px;
 }
-.ftd-img img {
+.lvdf-img img {
      width: 100%;     /* L'image s'adapte à son conteneur */
     height: auto;    /* Garde les proportions */
     display: block;  /* Évite l'espace fantôme sous les images inline */
@@ -180,14 +180,14 @@ a {
     width: 50%;
 }
 
-/* --------------------------------------drift-transition-------------------------------------------------- */
-.shoot-transition {
+/* --------------------------------------video-transition-------------------------------------------------- */
+.video-transition {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 40px 80px;
 }
-.shoot-img {
+.lvdf-video {
     width: 100% ;
     
 }
@@ -305,12 +305,12 @@ a {
     padding: 25px 200px;
     font-size: 38px;
     font-family: "Bebas Neue", cursive;
-    background-color: #FFD300;
+    background-color: #50713E;
     border: none;
 }
 .btn:hover {
     background-color: #000000;
-    border: 1px solid #FFD300;
+    border: 1px solid #50713E;
     transition: 0.5s;
 
 }
