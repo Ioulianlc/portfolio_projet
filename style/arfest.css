@@ -14,10 +14,10 @@ Body {
 /* --------------------------------------HEADER-------------------------------------------------- */
 .home-icon {
     display: flex;
-    justify-content: right;
+    justify-content: left;
     margin: 50px 80px;
     position: fixed;
-    top: 0;
+    top: 20px;
     z-index: 1000;
 }
 #home {
@@ -55,21 +55,21 @@ a {
     color: white;
     font-size: 24px;
 }  
-    #LVDF-logo {
+    #arfest-logo {
         display: flex;
         justify-content: center;
         align-items: center;    
     }
-    #LVDF-logo img {
+    #arfest-logo img {
         height: 400px;
     }
     #title_projet h1 {
-        font-size: 180px;
+        font-size: 200px;
         margin: 0 auto;
         letter-spacing: 0.05em;
     }
     .tspan {
-        color: #50713E;
+        color: #7027E2;
     }
 /* --------------------------------------Présentation-------------------------------------------------- */
 
@@ -118,8 +118,8 @@ a {
     height: 600px;
 }
 
-.img1, .img2 {
-    width: 50%;
+.img1{
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -127,7 +127,7 @@ a {
 
 /* --------------------------------------Mon role dans l'association-------------------------------------------------- */
 
-.lvdf-work {
+.arfest-work {
     display: flex;
     flex-direction: column;
     margin: 80px 80px;
@@ -140,7 +140,7 @@ a {
     align-items: flex-start;
     gap: 60px;
 }
-.lvdf-img img {
+.arfest-img img {
      width: 100%;     /* L'image s'adapte à son conteneur */
     height: auto;    /* Garde les proportions */
     display: block;  /* Évite l'espace fantôme sous les images inline */
@@ -180,14 +180,14 @@ a {
     width: 50%;
 }
 
-/* --------------------------------------video-transition-------------------------------------------------- */
-.video-transition {
+/* --------------------------------------drift-transition-------------------------------------------------- */
+.shoot-transition {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 40px 80px;
 }
-.lvdf-video {
+.shoot-img {
     width: 100% ;
     
 }
@@ -305,12 +305,12 @@ a {
     padding: 25px 200px;
     font-size: 38px;
     font-family: "Bebas Neue", cursive;
-    background-color: #50713E;
+    background-color: #7027E2;
     border: none;
 }
 .btn:hover {
     background-color: #000000;
-    border: 1px solid #50713E;
+    border: 1px solid #7027E2;
     transition: 0.5s;
 
 }

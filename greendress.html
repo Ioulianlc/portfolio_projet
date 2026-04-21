@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/greendress.css">
+     <link rel="icon" type="image/svg" href="img/FAVLOGO.svg">
+    <title>Projet Green Dress</title>
+    <style>
+        /* Animation d'arrivée pour les sections */
+        section {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s ease-out, transform 0.8s ease-out;
+            will-change: opacity, transform;
+        }
+        section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <section class="hero" id="hero">
+        <div class="top-Hero">
+            <div class="home-icon">
+            <a href="#hero"><img id="home" src="img/FAVLOGO.svg" width="100" height="100" alt="#"></a> 
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#a-propos">À propos</a><img class="img-icon" src="img/Ellipse 2.svg" alt="#"></li>
+                    <li><a href="index.html#portfolio">Portfolio</a><img class="img-icon" src="img/Rectangle 5.svg" alt="#"></li>
+                    <li><a href="index.html#contact">Contact</a><img class="img-icon" src="img/Polygon 2.svg" alt="#"></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content-hero">
+            <div id="green-logo">
+                <img id="green-mini-logo" src="img/imggreendress/Logo.png" alt="#">
+            </div>
+            <div id="title_projet">
+                <h1>Green<span class="tspan"> dress</span></h1>
+            </div>        
+        </div>     
+    </section>
+    <section class="presentation">
+        <div class="prez-text">
+            <h1>présentation du sujet</h1>
+            <p>Dans le cadre d'un module dédié au design graphique et digital, j'ai conçu une charte graphique complète incluant la création du logotype, l'élaboration d'une palette chromatique, le choix typographique ainsi que la définition des codes visuels (gimmicks et interdits).<br><br> Afin d'éprouver la pertinence de cette identité, j'ai poussé la réflexion au-delà du brief initial en réalisant une série de déclinaisons print et web : affiches, flyers, newsletters et contenus réseaux sociaux (stories). Le projet s'est conclu par la conception d'une maquette mobile (UI), garantissant ainsi une expérience utilisateur cohérente et une harmonie visuelle sur l'ensemble des points de contact.</p>
+        </div>
+        <div class="prez-img">
+            <img src="img/imggreendress/img1.png" alt="#">
+        </div>
+
+    </section>
+    <section class="green-work">
+        <div class="top-content">
+            <div class="top-img">
+                 <img class="green-img" src="img/imggreendress/img2.png" alt="">
+            </div>
+            <div class="top-text">
+                <h1>Les contraintes</h1>
+                <p>Ce projet s'est construit autour de contraintes spécifiques liées au positionnement de marque. À partir d'un univers imposé et d'un ciblage démographique précis (cœur de cible), j'ai défini une stratégie visuelle cohérente et différenciante. <br><br> L'une des composantes majeures du workshop fut l'intégration de l'intelligence artificielle dans le processus de création. Afin de garantir une parfaite adéquation avec la charte graphique, j'ai élaboré des prompts complexes au format JSON. Cette approche structurée a permis de générer des visuels photoréalistes sur-mesure, respectant scrupuleusement la direction artistique et les codes esthétiques de l'univers défini. </p>
+            </div>   
+        </div>
+    </section>
+    <section class="shoot-transition">
+        <img class="shoot-img" src="img/imggreendress/mockup.png" alt="shooting photo">
+    </section>
+     <section class="ftd-demo">
+        <div class="img-transition">
+            <img class="img1" src="img/imggreendress/mockup2.png" alt="#">
+            <img class="img2" src="img/imggreendress/mockup3.png" alt="#">
+        </div>
+        <div class="img-transition">
+            <img class="img1" src="img/imggreendress/mockup4.png" alt="#">
+            <img class="img2" src="img/imggreendress/mockup5.png" alt="#">
+        </div>
+        <div class="cta-ftd">
+            <a href="https://www.forthedogs.fr/" class="btn">Découvrir la charte graphique</a>
+        </div>
+        
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="footer-logo-container">
+                <div class="footer-logo">
+                    <img src="img/logo_footer.png" alt="#">
+                    <p>Ce qui se défini par conviction se résout par la fatigue</p>
+                </div>
+                <div class="footer-social">
+                    <h1>Réseaux</h1>
+                    <div class="social">    
+                        <a href=""><img src="img/instagram.png" alt="#"></a>
+                        <a href="https://github.com/Ioulianlc"><img src="img/github.png" alt="#"></a>
+                        <a href="https://www.linkedin.com/feed/"><img src="img/linkedin.png" alt="#"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-info">
+                <div class="footer-contact">
+                    <h1>Contact</h1>
+                    <ul>
+                        <li>07-81-91-44-32</li>
+                        <li>lc.ioulian@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h1>NAVIGATION</h1>
+                    <ul> 
+                        <li><a href="index.html#a-propos">À propos</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>    
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

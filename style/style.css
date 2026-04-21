@@ -109,6 +109,7 @@ a {
 }
 .titre-section {
     font-size: 360px;
+    font-weight: 500;
     margin: 0;
 }
 
@@ -166,6 +167,7 @@ a {
     justify-content: center; /* Ajoute cette ligne */
     margin-top: 100px;
     margin-bottom: 40px;
+    font-size: 38px;
     letter-spacing: 0.08rem;
     width: 100%; /* S'assure que le conteneur prend toute la largeur pour bien se centrer */
 }
@@ -497,7 +499,7 @@ footer {
 }
 
 .footer-logo img {
-    width: 600px; /* Ajustez selon la taille réelle de votre logo IOULIAN */
+    max-width: 600px; /* Ajustez selon la taille réelle de votre logo IOULIAN */
     height: auto;
     margin-bottom: 20px;
 }
@@ -536,7 +538,7 @@ footer {
     display: flex;
     flex-direction: row;
     width: 50%;
-    justify-content: flex-start; /* Aligne les colonnes à gauche du bloc droit */
+    justify-content: center; /* Aligne les colonnes à gauche du bloc droit */
     gap: 190px; /* Grand espace entre la colonne Contact et la colonne Nav */
 }
 
@@ -756,4 +758,17 @@ footer {
     .footer-nav ul {
         align-items: center; /* On centre tout le texte */
     }
+}
+
+/* --------------------------------------Animation d'arrivée-------------------------------------------------- */
+section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }

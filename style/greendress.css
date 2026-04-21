@@ -55,21 +55,21 @@ a {
     color: white;
     font-size: 24px;
 }  
-    #LVDF-logo {
+    #green-logo {
         display: flex;
         justify-content: center;
         align-items: center;    
     }
-    #LVDF-logo img {
+    #green-mini-logo img {
         height: 400px;
     }
     #title_projet h1 {
-        font-size: 180px;
+        font-size: 200px;
         margin: 0 auto;
         letter-spacing: 0.05em;
     }
     .tspan {
-        color: #50713E;
+        color: #849641;
     }
 /* --------------------------------------Présentation-------------------------------------------------- */
 
@@ -106,28 +106,9 @@ a {
     object-fit: cover; /* S'assure que l'image remplit bien le cadre si besoin */
 }
 
-
-
-
-/* --------------------------------------Transition 1-------------------------------------------------- */
-
-.img-transition {
-    display: flex;
-    flex-direction: row;
-    margin: 40px 80px;
-    height: 600px;
-}
-
-.img1, .img2 {
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
 /* --------------------------------------Mon role dans l'association-------------------------------------------------- */
 
-.lvdf-work {
+.green-work {
     display: flex;
     flex-direction: column;
     margin: 80px 80px;
@@ -140,7 +121,7 @@ a {
     align-items: flex-start;
     gap: 60px;
 }
-.lvdf-img img {
+.green-img img {
      width: 100%;     /* L'image s'adapte à son conteneur */
     height: auto;    /* Garde les proportions */
     display: block;  /* Évite l'espace fantôme sous les images inline */
@@ -180,116 +161,19 @@ a {
     width: 50%;
 }
 
-/* --------------------------------------video-transition-------------------------------------------------- */
-.video-transition {
+/* --------------------------------------drift-transition-------------------------------------------------- */
+.shoot-transition {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 40px 80px;
 }
-.lvdf-video {
+.shoot-img {
     width: 100% ;
     
 }
 
-/* --------------------------------------Mon rôle-------------------------------------------------- */
 
-/* Conteneur principal de la section */
-.mon-role {
-    margin: 80px 80px; /* Garde les marges cohérentes avec le reste du site */
-    color: white; /* S'assure que tout le texte est blanc */
-}
-
-/* --- Partie Supérieure (Titre/Liste vs Image) --- */
-
-.top-role {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; /* Écarte les deux blocs */
-    align-items: center; /* Aligne le haut du texte avec le haut de l'image */
-    gap: 60px; /* Espace important entre le bloc texte et l'image */
-}
-
-/* Bloc texte supérieur gauche */
-.top-role .top-text {
-    width: 45%; /* Prend un peu moins de la moitié de la largeur */
-}
-
-/* Titre H1 (devrait idéalement être un H2 sémantiquement) */
-.top-text h1 {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 48px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 40px; /* Espace sous le titre comme sur l'image */
-    color: white;
-}
-
-/* Styles pour les paragraphes et textes courants de cette section */
-.mon-role p, 
-.top-text li {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 18px; /* Légèrement plus petit que les 20px d'avant pour coller à l'image */
-    line-height: 1.5; /* Bonne hauteur de ligne pour la lisibilité */
-    color: #f0f0f0; /* Un blanc très légèrement cassé est moins agressif sur fond noir */
-}
-
-/* Introduction avant la liste */
-.top-text p {
-    margin-bottom: 20px;
-}
-
-/* --- Gestion de la liste à puces --- */
-/* IMPORTANT : Il faut écraser les styles "ul" et "li" généraux de votre navbar */
-
-.top-text ul {
-    display: flex;
-    flex-direction: column; /* Remet la liste en colonne */
-    margin: 0;
-    padding-left: 25px; /* Espace pour les puces */
-    justify-content: flex-start; /* Annule le 'center' de la nav */
-}
-
-.top-text li {
-    list-style-type: disc; /* Force l'affichage des puces rondes */
-    margin: 0 0 15px 0; /* Annule les marges latérales de la nav et ajoute de l'espace en bas */
-    padding: 0;
-    color: #f0f0f0;
-}
-
-
-/* Bloc image supérieur droit */
-.top-role .top-img {
-    width: 50%; /* L'image semble prendre la moitié de l'espace ou un peu plus */
-}
-
-.role-img {
-    width: 100%;     /* L'image s'adapte à son conteneur */
-    height: auto;    /* Garde les proportions */
-    display: flex;  /* Évite l'espace fantôme sous les images inline */
-    object-fit: cover; /* S'assure que l'image remplit bien le cadre si besoin */
-}
-
-
-/* --- Partie Inférieure (Les deux paragraphes de compétences) --- */
-
-.bottom-role {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 60px; /* Même écart que la partie supérieure pour l'alignement */
-    margin-top: 60px; /* Espace important entre le haut et le bas */
-}
-
-/* Pour que les textes du bas s'alignent verticalement avec ceux du haut,
-   on utilise des largeurs similaires */
-.left-role {
-    width: 45%; 
-}
-
-.right-role {
-    width: 50%;
-}
 
 /* --------------------------------------Découvrir le site-------------------------------------------------- */
 .ftd-demo {
@@ -302,15 +186,16 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 60px;
     padding: 25px 200px;
     font-size: 38px;
     font-family: "Bebas Neue", cursive;
-    background-color: #50713E;
+    background-color: #849641;
     border: none;
 }
 .btn:hover {
     background-color: #000000;
-    border: 1px solid #50713E;
+    border: 1px solid #849641;
     transition: 0.5s;
 
 }
@@ -439,7 +324,6 @@ footer {
 
 /* --------------------------------------HEADER-------------------------------------------------- */
 
-/* --------------------------------------Animation d'arrivée-------------------------------------------------- */
 section:not(.hero) {
     opacity: 0;
     transform: translateY(40px);

@@ -26,6 +26,7 @@ Body {
     align-items: center;    
     margin-top: 20px;
 }
+
 .content-hero{
     margin: 80px 80px;
 }
@@ -438,3 +439,17 @@ footer {
 
 
 /* --------------------------------------HEADER-------------------------------------------------- */
+
+/* --------------------------------------Animation d'arrivée-------------------------------------------------- */
+/* Animation d'arrivée sur toutes les sections SAUF la classe .hero */
+section:not(.hero) {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+section:not(.hero).is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
