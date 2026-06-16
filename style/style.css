@@ -1,9 +1,15 @@
+/* =========================================
+   1. RESET ESSENTIEL ET VARIABLES GLOBAL
+   ========================================= */
+*, *::before, *::after {
+    box-sizing: border-box; 
+}
 
 html {
     scroll-behavior: smooth;
 }
 
-Body {
+body {
     background-color: black;
     color: white;
     font-family: 'Bebas Neue', cursive;
@@ -12,39 +18,35 @@ Body {
     padding: 0;
 }
 
-
-/* --------------------------------------HEADER-------------------------------------------------- */
+/* =========================================
+   2. HEADER / HERO (BASE DESKTOP)
+   ========================================= */
 .hero {
     display: flex;
     flex-direction: column;
-    
+    width: 100%;
 }
 
-
 .top-Hero {
-        border-top: 1px solid #ffffff;
-        border-bottom: 1px solid #ffffff;
-        display: flex;
-        align-items: center;
-        margin-top: 20px;
-        padding: 10px 30px;
-        justify-content: space-between;
-
-    }
-
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px; 
+    padding: 10px 20px; 
+    width: 100%;
+}
 
 #top-star {
-        width: 50px;
-        height: 50px;
-        align-items: flex-end;
+    width: 80px;
+    height: 80px;
 }
 
 #mini-logo {
-        width: 50px;
-        height: 89px;
+    width: auto; 
+    height: 90px; 
 }
-
-/* --------------------------------------NAV-------------------------------------------------- */
 
 .nav-hero {
     display: flex;
@@ -55,218 +57,311 @@ Body {
 }
 
 .nav-hero img {
-    height: 90%;
-    width: 90%;
+    width: 95%; 
+    max-width: 95%; 
+    height: auto;
 }
 
-.nav-hero h1 {
-    font-size: 48px;
-    letter-spacing: 2px;
-    margin-top: 10px;
+/* =========================================
+   3. NAVIGATION (BASE DESKTOP)
+   ========================================= */
+nav {
+    width: 100%;
+    margin-top: 40px; 
 }
-
-
 
 ul {
     display: flex;
-    margin-top: 20px;
+    justify-content: center; 
+    align-items: center;
+    width: 100%; 
+    padding: 0;
+    margin: 0;
+    gap: 80px; 
 }
 
 li {
     list-style: none;
-    color: white;
-    margin: 0 12%;
-    gap: 10px;
-    display: flex;       /* Active le mode Flexbox pour que GAP fonctionne */
-    gap: 10px;           /* Espace entre le lien (texte) et l'image */
-    align-items: center; /* Aligne l'image et le texte sur la même ligne horizontale */
+    display: flex;
+    gap: 12px; 
+    align-items: center;
+    white-space: nowrap; 
 }
-    
-
 
 a {
     text-decoration: none;
     color: white;
     font-size: 24px;
-}   
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
+.img-icon {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
 
-/* --------------------------------------À propos-------------------------------------------------- */
-
-.a-propos{
-    margin: 150px 80px;
-} 
+/* =========================================
+   4. SECTION À PROPOS (BASE DESKTOP - GRID)
+   ========================================= */
+.a-propos {
+    margin: 150px 80px; 
+}
 
 .titre-container {
     display: flex;
-    flex-direction: row;
     align-items: baseline;
 }
+
+.titre-section {
+    font-size: 200px;
+    font-weight: normal;
+    margin: 0;
+    line-height: 0.9;
+    text-transform: uppercase;
+}
+
 .titre-container img {
-    width: 100px;
-    height: 100px;
+    width: 50px; 
+    height: 50px;
     margin-left: 20px;
 }
-.titre-section {
-    font-size: 360px;
-    font-weight: 500;
+
+.a-propos-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px 60px; 
+    margin-top: 80px;
+    align-items: start;
+}
+
+.sous-titre {
+    grid-column: 1 / 2; 
+    font-size: 48px;
+    line-height: 1.2;
+    text-transform: uppercase;
     margin: 0;
 }
 
-.a-propos-description {
-    width: 40%;
-    padding-right: 40px;
-}
-.a-propos-img {
-    width: 50%;
-}
-.a-propos-description h1 {
-    font-size: 48px;
-    line-height: 1.2;
-}
-.a-propos-description span {
+.sous-titre span {
     color: #0040FF;
 }
-.a-propos-description p {
-    font-family: 'work sans', sans-serif;
-    font-size: 20px;
-    line-height: 1;
-    margin: 40px 0;
+
+.a-propos-textes {
+    grid-column: 1 / 2; 
 }
 
-.a-propos-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* margin: 80px 100px; */
-}       
+.a-propos-textes p {
+    font-family: 'work sans', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+}
 
 .btn {
+    grid-column: 1 / 2; 
     background-color: #0040FF;
     font-family: "work sans", sans-serif;
     color: white;
-    border: none;
-    margin-top: 80px;
+    border: 2px solid transparent;
     padding: 15px 30px;
     font-size: 24px;
     cursor: pointer;
-    
-}
-.btn:hover {
-    background-color: #ffffff;
-    border: #0040FF 2px solid;
-    color: #0040FF;
-    transition: 1.2s;
+    display: inline-block;
+    justify-self: start; 
+    transition: 0.3s ease;
 }
 
-/* Le conteneur qui sert de masque (fenêtre) */
+.btn:hover {
+    background-color: transparent;
+    border-color: #0040FF;
+    color: #0040FF;
+}
+
+.a-propos-img {
+    grid-column: 2 / 3; 
+    grid-row: 1 / 4; 
+    width: 100%;
+}
+
+.a-propos-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%);
+}
+
+/* =========================================
+   5. COMPÉTENCES (BASE DESKTOP)
+   ========================================= */
+.competence {
+    margin-top: 120px;
+    width: 100%;
+    overflow: hidden; 
+    padding-bottom: 50px; 
+}
+
 .title-competence {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    justify-content: center; /* Ajoute cette ligne */
-    margin-top: 100px;
-    margin-bottom: 40px;
-    font-size: 38px;
-    letter-spacing: 0.08rem;
-    width: 100%; /* S'assure que le conteneur prend toute la largeur pour bien se centrer */
+    gap: 25px;
+    margin-bottom: 60px;
 }
+
+.title-competence h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 65px;
+    letter-spacing: 2px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.title-competence img {
+    width: 32px; 
+    height: auto;
+    flex-shrink: 0;
+}
+
 .content-competence {
     width: 100%;
-    overflow: hidden; /* Masque ce qui sort de l'écran */
-    white-space: nowrap; /* Empêche le texte de passer à la ligne */
-    position: relative;
-    padding: 20px 0; /* Un peu d'espace vertical */
+    white-space: nowrap; 
 }
 
-/* La bande qui contient tous les h4 et qui va bouger */
-.competence-track {
-    display: flex;
-    flex-direction: row;
-    width: max-content; /* La largeur s'adapte au contenu total */
-    gap: 60px; /* L'espace entre chaque mot */
-    
-    /* L'animation */
-    /* 20s = vitesse (plus le chiffre est bas, plus c'est rapide) */
-    /* linear = vitesse constante sans accélération */
-    /* infinite = boucle pour toujours */
-    animation: scroll-right 20s linear infinite;
-}
-
-/* Style des textes */
-.competence-track h4 {
-    margin: 0; /* On retire les marges par défaut pour gérer l'espace avec gap */
-    font-size: 32px; /* Ta taille d'origine */
-    letter-spacing: 0.08rem;
-    color: white; /* Assure-toi que la couleur est bonne */
-    flex-shrink: 0; /* Empêche les mots de s'écraser */
-}
-
-/* Définition de l'animation de GAUCHE vers la DROITE */
-@keyframes scroll-right {
-    0% {
-        /* On commence avec la bande décalée de 50% vers la gauche */
-        /* (On voit donc la deuxième moitié, la copie) */
-        transform: translateX(-50%);
-    }
-    100% {
-        /* On finit à 0 (position initiale) */
-        /* (On voit la première moitié, l'original) */
-        /* Le mouvement va donc de -50% vers 0% => vers la DROITE */
-        transform: translateX(0);
-    }
-}
 .content-competence:hover .competence-track {
     animation-play-state: paused;
 }
 
-.title-competence {
-    display: flex;
-    flex-direction: row;
+.competence-track {
+    display: inline-flex;
+    gap: 80px; 
     align-items: center;
-    margin-bottom: 40px;
+    animation: defilement 25s linear infinite;
+}
+
+.competence-track h4 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
+    color: white; 
+    margin: 0;
+    font-weight: normal;
     letter-spacing: 0.08rem;
 }
 
-.title-competence img {
-    width: 18px;
-    height: 18px;
-    margin: 0 20px;
+@keyframes defilement {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
-.content-competence {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    font-size: 32px;
-    letter-spacing: 0.08rem;
-}
-/* --------------------------------------Projet-------------------------------------------------- */
 
-.title-portfolio-text{
-    display: flex;
-    flex-direction: row;
+.title-portfolio {
     width: 100%;
-    font-size: 48px;
-    border-top: white 1px solid;
-    border-bottom: white 1px solid;
-    display: inline-block;
+    overflow-x: hidden; 
+    background-color: #050505; 
+    color: white;
+    padding-bottom: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* =========================================
+   PORTFOLIO (BASE DESKTOP)
+   ========================================= */
+
+.portfolio-hero {
+    position: relative;
+    margin: 100px 80px 40px 80px; 
+    display: inline-block; /* Permet à la forme rouge de s'accrocher à la fin du mot */
+}
+
+/* 1. TITRE PLUS GROS */
+.portfolio-title {
+    font-size: 320px; /* Augmenté (était 160px) */
+    letter-spacing: 4px;
+    margin: 0;
+    padding: 0;
+    line-height: 1; 
+    font-weight: normal;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+}
+
+/* --- Lignes de la grille --- */
+.grid-line {
+    position: absolute;
+    background-color: #787878; 
+    z-index: 1;
+}
+
+.h-line-1 { top: 30px; left: -50vw; width: 200vw; height: 2px; } 
+.h-line-2 { bottom: 30px; left: -50vw; width: 200vw; height: 2px; }
+
+.v-line-1 { top: -40px; bottom: -80px; left: 0; width: 2px; } 
+.v-line-2 { top: -40px; bottom: -80px; left: 95px; width: 2px; } /* Ajusté pour le "P" de 200px */
+
+/* --- Formes géométriques --- */
+.shape {
+    position: absolute;
+    z-index: 3;
+}
+
+.red-demi-circle {
+    top: 30px; 
+    right: -150px; /* Position corrigée : accroché au bord droit de la dernière lettre */
+    width: 140px;
+    height: 70px;
+    background-color: #FF1D1D;
+    border-bottom-left-radius: 140px;
+    border-bottom-right-radius: 140px;
+}
+
+.blue-triangle {
+    bottom: -50px; 
+    left: 0; 
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 95px solid #0040FF; /* Ajusté pour toucher exactement la v-line-2 */
+}
+
+.white-square {
+    bottom: -60px; 
+    right: 0px; /* Aligné sous la dernière lettre */
+    width: 40px;
+    height: 40px;
+    background-color: white;
+}
+
+/* --- Sous-Titre PROJETS --- */
+.title-portfolio-text {
+    display: block; 
+    margin: 150px 80px 40px 80px; 
+    border-top: 2px solid #ffffff; 
+    border-bottom: 2px solid #ffffff;
+    padding: 5px 0; 
+}
+
+/* 2. SOUS-TITRE PLUS GROS */
+.title-projet {
+    margin: 0; 
+    font-size: 48px; /* Augmenté (était 36px) */
+    text-transform: uppercase;
+    font-weight: normal;
     letter-spacing: 2px;
-}
-
-.title-projet{
-    margin: 10px 110px;
 }
 
 .list-projet {
     display: flex;
     flex-direction: column;
-    margin: 150px 80px;
+    margin: 80px 80px; 
 }
 
 .projet {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     padding: 10px 30px;
     border-top: 1px solid white;
@@ -274,122 +369,91 @@ a {
     width: 100%;
     margin-top: 60px;
     margin-bottom: 20px;
+    gap: 20px;
 }
 
 .num-projet {
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    width: 50%;
+    width: 50%; 
     padding: 0px 30px;
-    
 }
+
 .num-projet a h1 {
-    font-size: 30px; /* Maintenant aligné avec les autres titres */
-    color: white;    /* Pour s'assurer qu'il reste blanc malgré le lien */
-    margin: 0;       /* Pour éviter les décalages verticaux */
+    font-size: 30px; 
+    color: white;    
+    margin: 0;       
 }
 
 .description-projet {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 20px;
+    flex-wrap: nowrap;
+    gap: 10px;
 }
+
 .description-projet p:first-child {
     margin: 0;
     padding: 8px 18px;
     border: #0040FF 1px solid;
-
 }
+
 .description-projet p:last-child {
     margin: 0;
     padding: 8px 18px;
     border: #FF1D1D 1px solid;
-    
 }
-
-
 
 #imgPortfolio {
     width: 100%;
     margin-bottom: 20px;
 }
 
-
-/* separate the project number and the project title visually */
-
 .list-projet .projet > div:first-child {
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
 .list-projet .projet > div:first-child h1:first-child {
     margin: 0;
     padding-right: 18px;
-    font-size: 48px; /* number size, adjust as needed */
+    font-size: 48px; 
     min-width: 48px;
     text-align: center;
 }
+
 .list-projet .projet > div:first-child h1:nth-child(2) {
     margin: 0;
     padding-left: 18px;
-    font-size: 30px; /* project title size, adjust as needed */
+    font-size: 30px; 
 }
 
-@media (max-width: 700px) {
-    .list-projet .projet > div:first-child {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-    }
-    .list-projet .projet > div:first-child h1:first-child {
-        border-right: none;
-        padding-right: 0;
-    }
-    .list-projet .projet > div:first-child h1:nth-child(2) {
-        padding-left: 0;
-    }
-    .description-projet {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-    }
-    .description-projet p:first-child {
-        border-right: none;
-        padding-right: 0;
-    }
-    .description-projet p:last-child {
-        padding-left: 0;
-    }
-}
-
-/* --------------------------------------Contact-------------------------------------------------- */
-
-/* --------------------------------------Contact-------------------------------------------------- */
-
+/* =========================================
+   7. CONTACT (BASE DESKTOP)
+   ========================================= */
 .contact {
-    margin: 150px 80px;   
+    margin: 150px 80px; 
 }
 
-/* Le conteneur global qui met le formulaire et l'image côte à côte */
 .contact-container {
     display: flex;
-    justify-content: space-between; /* Ecarte le formulaire de l'image */
-    align-items: flex-end; /* Aligne le bas du formulaire avec le bas de l'image */
-    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end; 
     margin: 50px 80px;
+    width: 100%;
 }
 
-/* --- PARTIE GAUCHE : FORMULAIRE --- */
 .form-content {
-    flex: 1; /* Le formulaire prend tout l'espace disponible restant */
-    max-width: 60%; /* Mais on le limite à 60% pour laisser de la place à l'image */
+    flex: 1; 
+    max-width: 60%; 
     font-family: 'work sans', sans-serif;
 }
 
 .form-group {
-    margin-bottom: 40px; /* Espacement vertical aéré */
+    margin-bottom: 40px; 
 }
 
 .form-group label {
@@ -400,11 +464,11 @@ a {
     letter-spacing: 0.5px;
 }
 
-.form-group input {
+.form-group input, .form-group textarea {
     width: 100%;
-    background-color: transparent; /* Fond transparent */
+    background-color: transparent; 
     border: none;
-    border-bottom: 1px solid #555; /* Ligne grise */
+    border-bottom: 1px solid #555; 
     padding: 10px 0;
     color: #fff;
     font-size: 18px;
@@ -413,39 +477,21 @@ a {
     font-family: 'work sans', sans-serif;
 }
 
-.form-group input:focus {
-    border-bottom: 1px solid #ffffff; /* Ligne blanche au focus */
-}
-.form-group textarea {
-    width: 100%;
-    background-color: transparent; /* Fond transparent */
-    border: none;
-    border-bottom: 1px solid #555; /* Ligne grise */
-    padding: 10px 0;
-    color: #fff;
-    font-size: 18px;
-    outline: none;
-    transition: border-color 0.3s;
-    font-family: 'work sans', sans-serif;
+.form-group input:focus, .form-group textarea:focus {
+    border-bottom: 1px solid #ffffff; 
 }
 
-.form-group textarea:focus {
-    border-bottom: 1px solid #ffffff; /* Ligne blanche au focus */
-}
-
-/* --- LE BOUTON --- */
 .btn-container {
     display: flex;
-    justify-content: flex-end; /* C'est ici qu'on colle le bouton à droite vers l'image */
+    justify-content: flex-end; 
     margin-top: 30px;
-    padding-right: 0; /* S'assure qu'il touche le bord */
 }
 
 .btn-container button {
     background-color: #0040FF;
     color: #ffffff;
     border: none;
-    padding: 15px 50px; /* Taille du rectangle */
+    padding: 15px 50px; 
     font-size: 18px;
     font-family: 'work sans', sans-serif;
     cursor: pointer;
@@ -458,12 +504,10 @@ a {
     color: #0040FF;
 }
 
-/* --- PARTIE DROITE : IMAGE --- */
 .img-contact {
-    flex: 0 0 auto; /* Empêche l'image de se déformer */
-    width: 35%; /* L'image prend environ 35% de la largeur */
     display: flex;
-    /* justify-content: flex-end; Aligne l'image à droite dans son conteneur */
+    flex: 0 0 auto;
+    width: 35%;
 }
 
 .img-contact img {
@@ -472,34 +516,35 @@ a {
     object-fit: contain;
 }
 
-
-
-/* --------------------------------------Footer----------------------------------------------- */
-
+/* =========================================
+   8. FOOTER (BASE DESKTOP)
+   ========================================= */
 footer {
-    background-color: white; /* Fond blanc comme sur l'image */
-    color: black; /* Texte en noir */
-    padding: 60px 80px; /* Marges internes */
-    margin-top: 80px; /* Séparation avec la section précédente */
+    background-color: white; 
+    color: black; 
+    padding: 60px 80px; 
+    margin-top: 80px; 
 }
 
 .footer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between; /* Sépare le bloc gauche du bloc droit */
-    align-items: flex-start;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 0;
 }
 
-/* --- Colonne Gauche (Logo + Slogan + Réseaux) --- */
 .footer-logo-container {
     display: flex;
     flex-direction: column;
-    width: 45%; /* Prend presque la moitié de la largeur */
-    gap: 20px; /* Espace entre le slogan et la partie "Réseaux" */
+    width: 45%; 
+    align-items: flex-start; 
+    text-align: left;
+    gap: 20px; 
 }
 
 .footer-logo img {
-    max-width: 600px; /* Ajustez selon la taille réelle de votre logo IOULIAN */
+    max-width: 600px; 
     height: auto;
     margin-bottom: 20px;
 }
@@ -509,13 +554,12 @@ footer {
     font-size: 18px;
     line-height: 1.4;
     color: black;
-    max-width: 400px; /* Pour éviter que le slogan ne soit trop long */
+    max-width: 400px; 
 }
 
-/* Titre "RESEAUX" et icônes */
 .footer-social h1 {
     font-family: 'Bebas Neue', cursive;
-    font-size: 48px; /* Taille réduite par rapport au reste du site */
+    font-size: 48px; 
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -524,34 +568,26 @@ footer {
 
 .social {
     display: flex;
-    gap: 20px; /* Espace entre les icônes */
+    gap: 20px; 
 }
 
 .social img {
-    width: 42px; /* Taille des icônes instagram/linkedin/github */
+    width: 42px; 
     height: auto;
-    filter: brightness(0); /* Force les icônes en noir si elles sont colorées */
+    filter: brightness(0); 
 }
 
-/* --- Colonne Droite (Contact + Navigation) --- */
 .footer-info {
     display: flex;
     flex-direction: row;
     width: 50%;
-    justify-content: center; /* Aligne les colonnes à gauche du bloc droit */
-    gap: 190px; /* Grand espace entre la colonne Contact et la colonne Nav */
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    gap: 190px;
 }
 
-/* Styles communs pour Contact et Nav */
-.footer-contact, 
-.footer-nav {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Titres des colonnes (CONTACT / NAV) */
-.footer-contact h1, 
-.footer-nav h1 {
+.footer-contact h1, .footer-nav h1 {
     font-family: 'Bebas Neue', cursive;
     font-size: 48px;
     margin-bottom: 25px;
@@ -560,30 +596,25 @@ footer {
     color: black;
 }
 
-/* Réinitialisation des listes pour le footer (pour annuler le flex center du header) */
-.footer-contact ul, 
-.footer-nav ul {
+.footer-contact ul, .footer-nav ul {
     display: flex;
-    flex-direction: column; /* Liste verticale */
+    flex-direction: column; 
+    align-items: flex-start;
     margin: 0;
     padding: 0;
-    gap: 15px; /* Espace entre les éléments de liste */
-    align-items: flex-start; /* Alignement à gauche */
+    gap: 15px; 
 }
 
-.footer-contact li, 
-.footer-nav li {
+.footer-contact li, .footer-nav li {
     list-style: none;
-    margin: 0; /* Annule les marges du header */
+    margin: 0; 
     padding: 0;
     font-family: 'Work Sans', sans-serif;
     font-size: 18px;
     color: black;
 }
 
-/* Liens (numéro, email, menu) */
-.footer-contact li, 
-.footer-nav a {
+.footer-contact li, .footer-nav a {
     text-decoration: none;
     color: black;
     font-size: 20px;
@@ -591,184 +622,227 @@ footer {
 }
 
 .footer-nav a:hover {
-    text-decoration: underline; /* Petit effet au survol */
+    text-decoration: underline; 
 }
-
-
-/* --------------------------------------Animation Flip Lettres-------------------------------------------------- */
-
-.text-flip {
-    display: inline-block;
-    cursor: pointer;
-}
-
-.letter {
-    display: inline-block;
-    transition: transform 0.6s ease;
-    transform-style: preserve-3d;
-}
-
-/* Animation pour les lettres alternées */
-.text-flip:hover .letter.flip {
-    transform: rotateY(180deg);
-}
-
-/* Optionnel : couleur différente pour les lettres qui tournent */
-.letter.flip {
-    color: #ffffff;
-}
-
-/* Pour les titres de projet */
-.num-projet h1 .text-flip {
-    display: inline;
-}
-
-/* Pour que l'animation fonctionne sur plusieurs éléments */
-.titre-section.text-flip .letter {
-    display: inline-block;
-}
-
-
-
 
 /* =========================================
-   VERSION MOBILE (Écrans < 900px)
+   9. ADAPTATION MOBILE (TOUS LES ECRANS < 900px)
+   LA CASCADE S'OPÈRE ICI - NE RIEN AJOUTER EN DESSOUS
    ========================================= */
 @media (max-width: 900px) {
+    
+    /* --- HERO --- */
+    .top-Hero { padding: 10px 15px; }
+    #top-star { width: 35px; height: 35px; }
+    #mini-logo { height: 40px; }
+    .nav-hero img { width: 80%; }
 
-    /* 1. ON RÉDUIT LES MARGES GÉNÉRALES */
-    .a-propos, 
-    .list-projet, 
-    .contact, 
-    footer {
-        margin: 60px 20px; /* On passe de 150px à 60px pour aérer sans écraser */
-        padding: 0;
-    }
+    /* --- NAV --- */
+    ul { gap: 40px; }
+    li { gap: 6px; }
+    a { font-size: 20px; letter-spacing: 1px; }
+    .img-icon { width: 10px; height: 10px; }
 
-    /* 2. HEADER & NAV */
-    .nav-hero img {
-        height: 90%;
-        width: 90%;
-    }
-    .nav-hero h1 {
-        font-size: 32px; /* Plus petit */
-    }
-    nav ul {
-        flex-direction: row; /* Menu vertical */
-        align-items: center;
-        padding: 0;
-        gap: 20px;
-    }
-    nav ul li {
-        margin: 0; /* On enlève les grosses marges latérales */
-    }
-
-    /* 3. À PROPOS (Gros changement) */
-    .titre-section {
-        font-size: 80px; /* On passe de 360px (énorme) à 80px */
-        line-height: 1;
-    }
-    .titre-container img {
-        width: 50px;
-        height: 50px;
+    /* --- À PROPOS --- */
+    .a-propos { margin: 60px 20px; }
+    .titre-section { font-size: 75px; }
+    .titre-container img { width: 24px; height: 24px; margin-left: 8px; }
+    
+    .a-propos-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 40px;
     }
     
-    .a-propos-content {
-        flex-direction: column-reverse; /* L'image passe au-dessus ou en dessous du texte */
-        gap: 40px;
-    }
-    .a-propos-img img {
-        width: 80%; /* Mets la valeur que tu veux (ex: 150px, 80%, etc.) */
-        height: auto; /* Garde les proportions, ne déforme pas l'image */
-        display: block; 
-        margin: 0 auto; /* Centre l'image horizontalement */
-    }
-    .titre-container img {
-        width: 40px;  /* Plus petit sur mobile */
-        height: 40px;
-        margin-left: 10px; /* Réduit un peu la marge aussi */
-    }
-    .a-propos-description, 
-    .a-propos-img {
-        width: 100%; /* Ils prennent toute la largeur */
-        padding: 0;
-    }
-    .a-propos-description h1 {
-        font-size: 32px; /* Titre plus lisible */
+    .sous-titre { font-size: 28px; }
+    .a-propos-textes p { font-size: 16px; }
+    
+    .btn {
+        font-family: 'Bebas Neue', cursive;
+        background-color: transparent;
+        border: 1px solid #0040FF;
+        color: white;
+        padding: 12px 30px;
+        font-size: 22px;
+        align-self: flex-start;
     }
 
-    /* 4. PROJETS */
-    .projet {
-        flex-direction: column; /* Les projets s'empilent */
-        gap: 20px;
-        align-items: flex-start;
+    /* --- COMPÉTENCES --- */
+    .competence { margin-top: 80px; }
+    .title-competence { gap: 15px; margin-bottom: 40px; }
+    .title-competence h1 { font-size: 35px; }
+    .title-competence img { width: 24px; flex-shrink: 0; }
+    .competence-track { gap: 40px; }
+    .competence-track h4 { font-size: 28px; }
+
+  @media screen and (max-width: 768px) {
+    
+    .portfolio-hero { margin: 60px 20px 20px 20px; }
+    
+    /* Titres agrandis sur mobile */
+    .portfolio-title { font-size: 90px; } /* Augmenté (était 70px) */
+    .title-projet { font-size: 32px; }    /* Augmenté (était 24px) */
+    
+    .h-line-1 { top: 12px; }
+    .h-line-2 { bottom: 12px; }
+    
+    .v-line-1 { top: -20px; bottom: -60px; left: 0; }
+    .v-line-2 { top: -20px; bottom: -60px; left: 44px; } /* Ajusté proportionnellement pour 90px */
+    
+    /* Correction de la position du demi-cercle sur mobile */
+    .red-demi-circle { 
+        width: 40px; 
+        height: 20px; 
+        right: -40px; /* S'assure qu'il déborde un peu à droite comme sur la maquette */
+        top: 12px; 
+        border-bottom-left-radius: 80px; 
+        border-bottom-right-radius: 80px;
     }
+    
+    .blue-triangle { 
+        bottom: -35px;
+        left: 0;
+        border-top: 15px solid transparent; 
+        border-bottom: 15px solid transparent; 
+        border-left: 44px solid #0040FF; /* La pointe touche la v-line-2 à 44px */
+    }
+    
+    .white-square { 
+        width: 25px; 
+        height: 25px; 
+        bottom: -35px; 
+        right: 0px; 
+    }
+
+    .title-portfolio-text { 
+        margin: 100px 20px 20px 20px; 
+    }
+}
+    .list-projet { 
+        margin: 40px 20px; 
+    }
+    
+    .projet {
+        flex-direction: column; /* Empile le bloc titre/numéro et le bloc tags */
+        align-items: flex-start;
+        gap: 15px; /* Espace entre le titre et les petits boutons */
+        padding: 20px 0; /* Nettoie un peu les marges internes */
+    }
+    
+    /* --- Ligne 1 : Numéro + Titre --- */
     .num-projet {
         width: 100%;
         padding: 0;
+        display: flex;
+        flex-direction: row; /* Force le numéro et le titre sur la même ligne */
+        align-items: baseline; /* Aligne tout sur la base des lettres */
+        gap: 15px; /* Espace entre le numéro et le titre */
     }
+    
+    .projet .num-projet a h1 {
+        font-size: 16px !important; /* Le !important force la priorité, à utiliser en dernier recours */
+    }
+
+    .projet .num-projet h1:first-child {
+        font-size: 24px !important;
+    }
+    
+    /* --- Ligne 2 : Les descriptions en ligne --- */
     .description-projet {
-        width: 100%;
-        flex-wrap: wrap; /* Si les tags sont trop longs, ils passent à la ligne */
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding-left: 0; /* Important : on enlève le padding pour que ça colle au titre */
+        margin-left: 0;
+    }
+    .description-projet p:first-child {
+        padding: 6px 12px; /* Ajusté pour mobile */
+        font-size: 14px;   /* Ajusté pour mobile */
+    }
+    .description-projet p:last-child {
+        padding: 6px 12px; /* Ajusté pour mobile */
+        font-size: 14px;   /* Ajusté pour mobile */
+    }
+    
+    /* Si tu veux qu'ils soient alignés avec le texte, ajoute une marge gauche 
+       correspondant à la largeur du numéro + gap */
+    @media (max-width: 900px) {
+        .description-projet {
+            margin-left: 47px; /* 32px (taille chiffre) + 15px (gap) = alignement parfait */
+        }
     }
 
-    /* 5. CONTACT */
-
-    .contact-title-img img{
-        max-width: 30%;
-
-    }
+    /* --- CONTACT --- */
+    .contact { margin: 80px 20px; }
     .contact-container {
-        flex-direction: row; /* Formulaire au-dessus, image en dessous */
+        flex-direction: column;
         margin: 0;
+        align-items: center;
     }
-    .form-content {
-        max-width: 100%; /* Le formulaire prend toute la place */
+    .form-content { max-width: 100%; width: 100%; }
+    .btn-container { justify-content: center; }
+    .img-contact { display: none; }
+
+    /* --- FOOTER --- */
+    footer { 
+        padding: 40px 20px; 
+        margin-top: 60px; 
+        overflow: hidden; /* Sécurité supplémentaire contre les débordements */
     }
-    .img-contact {
-        display: none;
+    
+    .footer { 
+        flex-direction: column; 
+        gap: 50px; 
     }
-    .btn-container {
-        justify-content: center; /* Bouton centré */
+    
+    /* Logo et slogan */
+    .footer-logo-container { 
+        width: 100%; 
+        align-items: center; 
+        text-align: center; 
+    }
+    
+    .footer-logo img {
+        max-width: 80%; 
     }
 
-    /* 6. FOOTER */
-    footer {
-        padding: 40px 20px;
+    /* Réduction de la taille de tous les titres du footer */
+    .footer-social h1, 
+    .footer-contact h1, 
+    .footer-nav h1 {
+        font-size: 36px; /* Taille beaucoup plus adaptée au mobile */
+        text-align: center;
+        width: 100%;
     }
-    .footer {
+
+    /* Forcer le centrage du bloc réseaux et de ses icônes */
+    .footer-social {
+        display: flex;
         flex-direction: column;
-        gap: 60px;
+        align-items: center;
+        width: 100%;
     }
-    .footer-logo-container, 
+    
+    .social { 
+        justify-content: center; 
+        width: 100%; 
+    }
+
+    /* Forcer le centrage des infos et de la navigation */
     .footer-info {
         width: 100%;
+        flex-direction: column;
         align-items: center;
-        text-align: center;
-    }
-    .footer-logo img {
-        width: 100%; /* Le logo s'adapte à l'écran */
-        max-width: 300px;
-    }
-    .footer-info {
-        flex-direction: column; /* Contact et Nav l'un sous l'autre */
         gap: 40px;
     }
-    .footer-contact ul, 
-    .footer-nav ul {
-        align-items: center; /* On centre tout le texte */
+    
+    .footer-contact, .footer-nav {
+        width: 100%;
+        align-items: center;
     }
-}
-
-/* --------------------------------------Animation d'arrivée-------------------------------------------------- */
-section {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 1s ease-out, transform 0.8s ease-out;
-    will-change: opacity, transform;
-}
-
-section.is-visible {
-    opacity: 1;
-    transform: translateY(0);
+    
+    .footer-contact ul, .footer-nav ul { 
+        align-items: center; 
+    }
 }
